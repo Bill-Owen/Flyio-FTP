@@ -1,0 +1,64 @@
+app = "ftpserver"
+primary_region = "syd"
+
+[mounts]
+  destination = "/data"
+  source = "data"
+
+[experimental]
+  allowed_public_ports = []
+  auto_rollback = true
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 21
+
+  [[services.ports]]
+    port = 21
+
+  [[services.tcp_checks]]
+    interval = "5s"
+    timeout = "2s"
+
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 21000
+
+  [[services.ports]]
+    port = 21000
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 21001
+
+  [[services.ports]]
+    port = 21001
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 21002
+
+  [[services.ports]]
+    port = 21002
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 21003
+
+  [[services.ports]]
+    port = 21003
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 21004
+
+  [[services.ports]]
+    port = 21004
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 21005
+
+  [[services.ports]]
+    port = 21005
